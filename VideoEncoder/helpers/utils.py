@@ -15,16 +15,16 @@ async def on_task_complete():
 
 async def add_task(event):
     try:
-        msg = await event.reply("`Downloading video...`")
+        msg = await event.reply("`Downloading video Master...`")
         filepath = await event.download_media(download_dir)
-        await msg.edit("`Encoding video...`")
+        await msg.edit("`Encoding video Master...`")
         new_file = encode(filepath)
         if new_file:
-            await msg.edit("`Video Encoded, getting metadata...`")
+            await msg.edit("`Video Encoded, getting metadata Master...`")
             duration = get_duration(new_file)
             thumb = get_thumbnail(new_file, download_dir, duration / 4)
             width, height = get_width_height(new_file)
-            await msg.edit("`Uploading video...`")
+            await msg.edit("`Uploading video Master...`")
             await event.client.send_file(
                 event.chat_id,
                 file=new_file,
