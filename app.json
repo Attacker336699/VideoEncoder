@@ -1,0 +1,27 @@
+{
+  "name": "Video-Converter",
+  "description": "Telegram Video Converter TO USE THIS FIRST GET PERMISSION FROM MASTER @HC_CARTOONS",
+  "repository": "https://github.com/bdhcjhiidj/VideoEncoder",
+  "logo": "https://telegra.ph/file/e0d6db44cb7dc53092509.jpg",
+  "keywords": ["Telegram", "Video Converter Of MASTER @HC_CARTOONS", "Converter"],
+  "env": {
+    "BOT_TOKEN": {
+      "description": "Get it from @BotFather"
+    },
+    "MONGO_URL": {
+      "description": "Custom path for downloads. Must end with a forward slash.",
+      "value": ""
+    }
+  },
+   "addons": [{
+    "plan": "heroku-postgresql"
+  }],
+   "buildpacks": [
+    {
+      "url": "heroku/python"
+    },
+    {
+      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
+    }
+  ]
+}
