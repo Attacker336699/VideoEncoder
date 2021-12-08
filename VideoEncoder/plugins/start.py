@@ -11,7 +11,7 @@ async def starter(event):
     if not await check_user(event.sender_id):
         await add_user(event.sender_id)
     await event.reply(
-        f"Hi {user.first_name}\nI can encode Telegram files in x265, just send me a video.",
+        f"Hi {user.first_name}\nI can encode Telegram files in x265 And Before Using Me Take Permission From My Master, If He Allow just send me a video.",
         buttons=[
             Button.url("Channel", url="https://t.me/BotzHub"),
             Button.url("Source", url="https://github.com/xditya/video-encoder-bot"),
